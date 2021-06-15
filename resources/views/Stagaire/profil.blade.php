@@ -22,7 +22,7 @@
                                 <div class="profile-detail" >
 									<div class="profile-info">
 										<h4 class="heading">Les Infomations</h4>
-										
+
                                         <table>
                                             <tr class=''>
                                                 <td class="text-success">CIN</td>
@@ -71,7 +71,7 @@
                             </div>
 
                             <hr>
-                            
+
                             <div class="text-center" style="padding-bottom: 10px;">
                                 <div class="row" >
 
@@ -89,12 +89,12 @@
                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                             {{ method_field('DELETE') }}
 
-                                            
+
                                             <button type="submit" id="" style="display: none;">Delete</button>
                                             <input type="button" value="Suprimer" id="dAlert" class="btn btn-danger" style="margin-top: 10px;">
-                                            
-                                        </form>                                    
-                                    
+
+                                        </form>
+
                                     </div>
                                     @endif
 
@@ -107,16 +107,12 @@
                                         <a href="{{ asset('storage/'.$s->motivation) }}" class="btn btn-success" style="margin-top: 10px;">Lettre motivation</a>
                                     </div>
 
-                                    @if( Auth::user() -> role == 'admin' || Auth::user() -> role == 'subAdmin')
-                                    <div class="col-md-6 text-centre">
-                                        <a href="{{ url('ATTESTATION/'.$s-> id) }}" class="btn btn-Primary"  style="margin-top: 10px;">attestation</a>
-                                    </div>
-                                    @endif
+
                                 </div>
                             </div>
-                            
+
                         </div>
-@endforeach                       
+@endforeach
                     </div>
 
 
@@ -150,36 +146,36 @@
                 </div>
                 <!-- ---------- -->
             </div>
-            		
+
         </div>
 
     </div>
 
 
-            
-            
+
+
 <script>
 
 $(document).ready(function(){
 
     $('#LStagaire').addClass('active');
 
-    $("#showAbs").click(function () { 
-        
+    $("#showAbs").click(function () {
+
         $('.bg-modal').css('display','flex');
-        
+
     });
 
 
-    $('.close').click(function () { 
-            
+    $('.close').click(function () {
+
             $('.bg-modal').css('display','none');
 
 
         });
-        
-        
-    
+
+
+
 });
 
 
